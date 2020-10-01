@@ -27,9 +27,9 @@ ARG PIP=pip3
 ARG PYTHON_VERSION=3.6.6
 ARG OPENSSL_VERSION=1.1.1g
 
-ARG TF_URL=https://aws-tensorflow-binaries.s3-us-west-2.amazonaws.com/tensorflow/r1.5_aws/20201001-114327/gpu/py36/tensorflow_gpu-1.15.4-cp36-cp36m-manylinux2010_x86_64.whl
+ARG TF_URL=https://aws-tensorflow-binaries.s3-us-west-2.amazonaws.com/tensorflow/r1.5_aws/20201001-114327/gpu/tensorflow_gpu-1.15.4-cp36-cp36m-manylinux2010_x86_64.whl
 
-ARG ESTIMATOR_URL=https://aws-tensorflow-binaries.s3-us-west-2.amazonaws.com/estimator/r1.5_aws/20201001-114327/tensorflow_estimator-1.15.0-py2.py3-none-any.whl
+ARG ESTIMATOR_URL=https://aws-tensorflow-binaries.s3-us-west-2.amazonaws.com/estimator/r1.5_aws/20201001-114327/tensorflow_estimator-1.15.2-py2.py3-none-any.whl
 
 # The smdebug pipeline relies for following format to perform string replace and trigger DLC pipeline for validating
 # the nightly builds. Therefore, while updating the smdebug version, please ensure that the format is not disturbed.
