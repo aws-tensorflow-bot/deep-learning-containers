@@ -27,6 +27,10 @@ ARG PIP=pip3
 ARG PYTHON_VERSION=3.6.6
 ARG OPENSSL_VERSION=1.1.1g
 
+ARG TF_URL=https://aws-tensorflow-binaries.s3-us-west-2.amazonaws.com/tensorflow/r1.5_aws/20201001-114327/gpu/py36/tensorflow_gpu-1.15.4-cp36-cp36m-manylinux2010_x86_64.whl
+
+ARG ESTIMATOR_URL=https://aws-tensorflow-binaries.s3-us-west-2.amazonaws.com/estimator/r1.5_aws/20201001-114327/tensorflow_estimator-1.15.0-py2.py3-none-any.whl
+
 # The smdebug pipeline relies for following format to perform string replace and trigger DLC pipeline for validating
 # the nightly builds. Therefore, while updating the smdebug version, please ensure that the format is not disturbed.
 ARG SMDEBUG_VERSION=0.9.1
@@ -197,8 +201,8 @@ RUN ${PIP} install --no-cache-dir -U \
     # Let's install TensorFlow separately in the end to avoid
     # the library version to be overwritten
  && ${PIP} install --no-cache-dir -U \
-    tensorflow_gpu-*cp36*.whl \
-    tensorflow_estimator*.whl \
+    ${TF_URL} \
+    ${ESTIMATOR_URL} \
     werkzeug==1.0.1 \
     smdebug==${SMDEBUG_VERSION}
 
