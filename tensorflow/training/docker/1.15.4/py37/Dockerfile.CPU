@@ -101,11 +101,11 @@ RUN ln -s $(which ${PYTHON}) /usr/local/bin/python \
 # install PyYAML==5.1.2 to avoid conflict with latest awscli
 # # python-dateutil==2.8.0 to satisfy botocore associated with latest awscli
 RUN ${PIP} install --no-cache-dir -U \
-    numpy==1.18.1 \
-    scipy==1.2.2 \
-    scikit-learn==0.22 \
-    pandas==1.0.1 \
-    Pillow==7.0.0 \
+    numpy==1.18.4 \
+    scipy==1.4.1 \
+    scikit-learn==0.23 \
+    pandas==1.0.3 \
+    Pillow==7.1.2 \
     h5py==2.10.0 \
     keras_applications==1.0.8 \
     keras_preprocessing==1.1.0 \
